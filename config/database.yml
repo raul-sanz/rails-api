@@ -86,11 +86,11 @@ production:
     <<: *primary_production
     url: <%= ENV["CACHE_DATABASE_URL"] %>
     migrations_paths: db/cache_migrate
-#  queue:
-#    <<: *primary_production
-#    database: nexu_api_production_queue
-#    migrations_paths: db/queue_migrate
-#  cable:
-#    <<: *primary_production
-#    database: nexu_api_production_cable
-#    migrations_paths: db/cable_migrate
+  queue:
+    <<: *primary_production
+    url: <%= ENV["QUEUE_DATABASE_URL"] %>
+    migrations_paths: db/queue_migrate
+  cable:
+    <<: *primary_production
+    URL: <%= ENV["CABLE_DATABASE_URL"] %>
+    migrations_paths: db/cable_migrate
