@@ -10,7 +10,7 @@ class Model < ApplicationRecord
   validates :name, length: { minimum: 1, message: "debe tener al menos 1 caracter" }
 
   validates :average_price, presence: { message: "no puede estar vacío" }, on: :update
-  validates :average_price, numericality: { only_integer: true, message: "Debe ser un número entero" }, if: :average_price?
+  validates :average_price, numericality: { only_integer: true, message: "Debe ser un número entero" }, if: :average_price? , on: :update
   validates :average_price, numericality: { greater_than: 100_000, message: "Debe ser mayor a 100,000" }, if: :average_price? ,on: :update
   
   validate :validate_average_price_on_create, on: :create
