@@ -14,7 +14,7 @@ API construida con Ruby on Rails 8.
 Cloná el repositorio:
 
 ```bash
-git clone https://github.com/tu-usuario/nexu-api.git
+git clone https://github.com/raul-sanz/rails-api.git
 cd nexu-api
 ```
 
